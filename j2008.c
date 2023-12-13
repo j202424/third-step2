@@ -31,20 +31,20 @@ int main() {
     sort_scores(english_scores, NUM_STUDENTS);
 
     // 結果の表示
-    printf("Science Statistics:\n");
-    printf("Mean: %.2f\n", science_mean);
-    printf("Standard Deviation: %.2f\n", science_std_dev);
-    printf("Total Score: %d\n", science_sum);
+    printf("理科統計\n");
+    printf("平均: %.2f\n", science_mean);
+    printf("標準偏差: %.2f\n", science_std_dev);
+    printf("合計点: %d\n", science_sum);
     printf("Sorted Scores (high to low):\n");
     for (int i = 0; i < NUM_STUDENTS; i++) {
         printf("%d ", science_scores[i]);
     }
     printf("\n");
 
-    printf("\nEnglish Statistics:\n");
-    printf("Mean: %.2f\n", english_mean);
-    printf("Standard Deviation: %.2f\n", english_std_dev);
-    printf("Total Score: %d\n", english_sum);
+    printf("\n英語統計\n");
+    printf("平均: %.2f\n", english_mean);
+    printf("標準偏差: %.2f\n", english_std_dev);
+    printf("合計点: %d\n", english_sum);
     printf("Sorted Scores (high to low):\n");
     for (int i = 0; i < NUM_STUDENTS; i++) {
         printf("%d ", english_scores[i]);
