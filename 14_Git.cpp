@@ -30,8 +30,8 @@ int main() {
     calculateZScores(englishScores, englishMean, englishStdDev, englishZScores);
 
     // 結果の表示
-    printResults(scienceScores, scienceZScores, "理科");
-    printResults(englishScores, englishZScores, "英語");
+    printResults(scienceScores, scienceZScores, "Science");
+    printResults(englishScores, englishZScores, "English");
 
     return 0;
 }
@@ -66,10 +66,10 @@ void calculateZScores(const std::vector<int>& scores, double mean, double stdDev
 
 // 結果の表示
 void printResults(const std::vector<int>& scores, const std::vector<double>& zScores, const std::string& subject) {
-    std::cout << subject << "の結果:\n";
-    std::cout << "平均点: " << calculateMean(scores) << "\n";
-    std::cout << "標準偏差: " << calculateStandardDeviation(scores, calculateMean(scores)) << "\n";
-    std::cout << "合計点: " << std::accumulate(scores.begin(), scores.end(), 0) << "\n";
+    std::cout << subject << "result:\n";
+    std::cout << "AvarageScore: " << calculateMean(scores) << "\n";
+    std::cout << "Standard Deviation: " << calculateStandardDeviation(scores, calculateMean(scores)) << "\n";
+    std::cout << "TotalScore: " << std::accumulate(scores.begin(), scores.end(), 0) << "\n";
     
     // 点数の高い順に並べ替え
     std::vector<std::pair<int, double>> sortedScores;
@@ -82,9 +82,9 @@ void printResults(const std::vector<int>& scores, const std::vector<double>& zSc
     });
 
     // 結果の表示
-    std::cout << "点数の高い順:\n";
+    std::cout << "Sort Score:\n";
     for (const auto& entry : sortedScores) {
-        std::cout << "点数: " << entry.first << ", 偏差値: " << entry.second << "\n";
+        std::cout << "Score: " << entry.first << ", Deviation value: " << entry.second << "\n";
     }
 
     std::cout << "-----------------------------\n";
